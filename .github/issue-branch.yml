@@ -1,0 +1,26 @@
+mode: chatops
+autoCloseIssue: true
+defaultBranch: 'master'
+branches:
+  - label: bug
+    prefix: fix/
+  - label: documentation
+    prefix: docs/
+  - label: duplicate
+    skip: true
+  - label: enhancement
+    prefix: feat/
+  - label: invalid
+    skip: true
+  - label: question
+    skip: true
+  - label: wontfix
+    skip: true
+copyIssueDescriptionToPR: true
+copyIssueLabelsToPR: true
+copyIssueAssigneeToPR: true
+copyIssueProjectsToPR: true
+copyIssueMilestoneToPR: true
+conventionalPrTitles: true
+conventionalStyle: semver
+commentMessage: '[Automated Message] Branch ${branchName} created for issue: ${issue.title}. All development related to this issue will be done in this new branch.'
