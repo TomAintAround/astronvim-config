@@ -1,0 +1,57 @@
+name: Bug Report
+description: Something is not working right
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before opening a new issue, take a moment to search through the current open ones.
+
+        ---
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Checklist
+      description: Have you completed the following steps and are still able to replicate the issue?
+      options:
+        - label: "`:AstroUpdate`"
+          required: true
+        - label: "`:AstroUpdatePackages`"
+          required: true
+        - label: Restarted AstroNvim
+          required: true
+
+  - type: input
+    id: ver
+    attributes:
+      label: Neovim Version
+      description: "Paste here the first 2 lines of the output of `nvim -v`."
+      placeholder: |
+        Example:
+        NVIM v0.9.1
+        Build type: Release
+    validations:
+      required: true
+
+  - type: textarea
+    id: desc
+    attributes:
+      label: Description
+      description: "What went wrong?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: How to reproduce
+      description: "How can someone else reproduce the issue?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Crash reports, logs, images, videos
+      description: Anything that can help. Please always ATTACH and not paste them.
