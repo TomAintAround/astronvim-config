@@ -1,8 +1,12 @@
-# AstroNvim User Configuration Example
+# AstroNvim User Configuration
 
-A user configuration template for [AstroNvim](https://github.com/AstroNvim/AstroNvim)
+A user configuration for [Neovim](https://github.com/neovim/neovim), with the
+help of [AstroNvim](https://github.com/AstroNvim/AstroNvim).
 
 ## 🛠️ Installation
+
+_For more detailed instructions, check
+[AstroNvim's website](https://astronvim.com/)_
 
 #### Make a backup of your current nvim and shared folder
 
@@ -17,11 +21,14 @@ mv ~/.local/share/nvim ~/.local/share/nvim.bak
 git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 ```
 
-#### Create a new user repository from this template
+#### Create a new user repository from their template
 
-Press the "Use this template" button above to create a new repository to store your user configuration.
+Go to their [configuration template](https://github.com/AstroNvim/user_example)
+and press the "Use this template" button above to create a new repository to
+store your user configuration.
 
-You can also just clone this repository directly if you do not want to track your user configuration in GitHub.
+You can also just clone that repository directly if you do not want to track
+your user configuration in GitHub.
 
 #### Clone the repository
 
@@ -33,4 +40,13 @@ git clone https://github.com/<your_user>/<your_repository> ~/.config/nvim/lua/us
 
 ```shell
 nvim
+```
+
+#### Check health
+
+While `nvim` is open, type the following command to check for missing
+dependencies.
+
+```shell
+:checkhealth
 ```
